@@ -14,12 +14,10 @@ public class TV {
 	public TV(Marca marca, boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
+		numTV++;
 	}
 
-    public static void contarTelevisores(){
-    	numTV++;
-    }
-    
+   
 	public void turnOff(){
 		estado= false;
 	}
@@ -34,27 +32,27 @@ public class TV {
 	}
 
     public void canalUp() {
-    	if(canal<120) {
+    	if(canal<120 && estado == true) {
     		canal++;
     	}
     }
     
     
     public void canalDown() {
-    	if(canal>1) {
+    	if(canal>1 && estado == true) {
     		canal--;
     	} 
     		
     }
  
     public void volumenUp() {
-        if (volumen < 7) {
+        if (volumen < 7 && estado == true) {
             volumen++;
         }
     }
 
     public void volumenDown() {
-        if (volumen > 0) {
+        if (volumen > 0 && estado == true) {
             volumen--;
         }
     }		
@@ -77,8 +75,9 @@ public class TV {
 
 
 	public void setCanal(int canal) {
-		if(1<=canal && canal<=120)
+		if(1<=canal && canal<=120 && estado == true) {
 		this.canal = canal;
+	    }
 	}
 
 
@@ -98,7 +97,7 @@ public class TV {
 
 
 	public void setVolumen(int volumen) {
-		if(0<=volumen && volumen<=7)
+		if(0<=volumen && volumen<=7 && estado == true)
 		this.volumen = volumen;
 	}
 
