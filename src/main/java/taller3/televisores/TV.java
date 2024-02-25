@@ -10,18 +10,14 @@ public class TV {
 	private Control control;
 	private static int numTV;
 	
-	/**
-	 *@param:recibe un objeto
-	 *@return:valor entero
-	 * 
-	 * */
+	
 	public TV(Marca marca, boolean estado) {
 		this.marca = marca;
 		this.estado = estado;
 	}
 
     public static void contarTelevisores(){
-    	setNumTV(getNumTV() + 1);
+    	numTV++;
     }
     
 	public void turnOff(){
