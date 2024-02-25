@@ -57,7 +57,7 @@ public class TV {
         }
     }
 
-    public void volumenDow() {
+    public void volumenDown() {
         if (volumen > 0) {
             volumen--;
         }
