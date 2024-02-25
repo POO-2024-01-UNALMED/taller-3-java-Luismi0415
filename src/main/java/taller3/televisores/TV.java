@@ -21,7 +21,7 @@ public class TV {
 	}
 
     public static void contarTelevisores(){
-    	numTV++;
+    	setNumTV(getNumTV() + 1);
     }
     
 	public void turnOff(){
@@ -114,6 +114,14 @@ public class TV {
 
 	public void setControl(Control control) {
 		this.control = control;
+	}
+
+	public static int getNumTV() {
+		return numTV;
+	}
+
+	public static void setNumTV(int numTV) {
+		TV.numTV = numTV;
 	}
 	
 	
